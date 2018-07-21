@@ -208,6 +208,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -378,3 +379,49 @@ header {
     margin-bottom: 5px;
 }
 
+/* ------------------------------------------------- */
+/* TESTIMONIALS */
+/* ------------------------------------------------- */
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/back-customers.jpg);
+    /* darkens image */
+    background-size: cover;
+    /* fills whole space of the browser */
+    color: #fff;
+    background-attachment: fixed;
+    /* image will stay in the same spot when you scroll */
+}
+
+blockquote:before {
+    font-size: 500%;
+    content: "\201C";
+    display: block;
+    position: absolute; 
+    /* need to ensure the parent has a relative position */
+    top: 0px;
+    left: -5px;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+    /* creates a line break */
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    /* will make the element round */
+    margin-right: 10px;
+    vertical-align: middle;
+}
