@@ -98,13 +98,28 @@ $('.js--nav-icon').click(function() {
         zoom: 12
     });
 
-    map.addMarker({
-        lat: -12.043333,
-        lng: -77.0,
-        title: 'Lima',
-        infoWindow: {
-            content: '<p>LIMA</p>'
+    GMaps.geolocate({
+        success: function(position) {
+          map.setCenter(position.coords.latitude, position.coords.longitude);
+        },
+        error: function(error) {
+          alert('Geolocation failed: '+error.message);
+        },
+        not_supported: function() {
+          alert("Your browser does not support geolocation");
+        },
+        always: function() {
+        //   alert("Done!");
         }
-    });
+      });
+
+    // map.addMarker({
+    //     lat: -12.043333,
+    //     lng: -77.0,
+    //     title: 'Lima',
+    //     infoWindow: {
+    //         content: '<p>LIMA</p>'
+    //     }
+    // });
 
 }); // END JQUERY
