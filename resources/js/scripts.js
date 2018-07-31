@@ -90,5 +90,21 @@ $('.js--nav-icon').click(function() {
 
 })
 
+// MAPS
+    var map = new GMaps({
+        div: '.map',
+        lat: -12.043333,
+        lng: -77.0,
+        zoom: 12
+    });
+
+    map.addMarker({
+        lat: -12.043333,
+        lng: -77.0,
+        title: 'Lima',
+        infoWindow: {
+            content: '<p>LIMA</p>'
+        }
+    });
 
 }); // END JQUERY

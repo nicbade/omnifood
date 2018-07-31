@@ -65,6 +65,26 @@
 
     .steps-box:first-child { text-align: center; }
     .app-screen { width: 40px; }
+
+    .map-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .map {
+       width: 100%;
+       height: 300px;
+       position: relative; 
+       z-index: 0;
+    }
+    
+    .form-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
 }
 
 /* SMALL TABLETS TO BIG TABLETS IN PORTRAIT MODE WIDTH 0 TO 1023PX */
@@ -97,7 +117,7 @@
         font-size: 250%;
     }
 
-    .contact-form { width: 80%; }
+    .contact-form { width: 90%; }
 }
 
 /* BIG TABLETS TO 1200PX (WIDTHS SMALLER THAN THE 1140PX ROW) */
